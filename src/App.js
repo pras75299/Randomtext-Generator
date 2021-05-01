@@ -12,10 +12,9 @@ function App() {
     if(count <= 0){
       numberCount = 1;
     }
-    if(count >= 8) {
-      numberCount = 8;
+    if(count >= data.length) {
+      numberCount = data.length;
     }
-
     setText(data.slice(0, numberCount));
   }
 
