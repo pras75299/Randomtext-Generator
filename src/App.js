@@ -25,9 +25,9 @@ function App() {
       <form onSubmit={handleSubmit} className="lorem-form">
         <label htmlFor="generateCount">Numbers of Paragraph</label>
         <input type="number" id="generateCount" value={count} onChange={(e) => setCount(e.target.value)} />
-        <button type="submit">Generate</button>
+        <button type="submit" className="btn">Generate</button>
       </form>
-      <article>
+      <article className="lorem-text">
         {text.map((item, index) => {
           return <p key={index}>{item}</p>
         })}
