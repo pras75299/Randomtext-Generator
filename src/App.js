@@ -9,14 +9,21 @@ function App() {
 
     let numberCount = parseInt(count);
 
+    if(count <= 0){
+      numberCount = 1;
+    }
+    if(count >= 8) {
+      numberCount = 8;
+    }
+
     setText(data.slice(0, numberCount));
   }
 
   return (
-    <section>
+    <section className="section-center">
       <h2>Random Text Generator</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="generateCount"></label>
+      <form onSubmit={handleSubmit} className="lorem-form">
+        <label htmlFor="generateCount">Numbers of Paragraph</label>
         <input type="number" id="generateCount" value={count} onChange={(e) => setCount(e.target.value)} />
         <button type="submit">Generate</button>
       </form>
